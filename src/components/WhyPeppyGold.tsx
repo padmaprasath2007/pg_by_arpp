@@ -1,8 +1,3 @@
-
-import React from 'react';
-// Import your icons here if you have them, otherwise we use emojis/CSS
-// import shieldIcon from '../assets/icons/shield.png'
-
 export default function WhyPeppyGold() {
   return (
     <section className="pg-why-bento" id="why-peppy">
