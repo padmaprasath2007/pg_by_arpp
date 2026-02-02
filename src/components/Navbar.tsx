@@ -1,33 +1,37 @@
-import { Link } from 'react-router-dom'
-import peppyLogo from '../assets/logo/peppy-logo.png'
+import peppyLogo from '../assets/logo/peppy-logo.png';
 
 export default function Navbar() {
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <header className="navbar-wrapper">
       <div className="navbar-content">
         
         {/* Island 1: Logo */}
         <div className="glass-island logo-island">
-          <Link to="/">
+          <button className="nav-btn-link" onClick={() => scrollToSection('top')}>
             <img src={peppyLogo} alt="Peppy Gold" className="navbar-logo" />
-          </Link>
+          </button>
         </div>
 
         {/* Island 2: Navigation Links */}
         <nav className="glass-island nav-island">
-          <Link to="/#why" className="nav-link">Why Peppy Gold</Link>
-          <Link to="/#how-it-helps" className="nav-link">How It Helps</Link>
-          <Link to="/faq" className="nav-link">FAQ</Link>
-          <Link to="/#partners" className="nav-link">Partners</Link>
+          <button className="nav-link-btn" onClick={() => scrollToSection('top')}>Home</button>
+          <button className="nav-link-btn" onClick={() => scrollToSection('howitworks')}>How It Works</button>
+          <button className="nav-link-btn" onClick={() => scrollToSection('partners')}>Partners</button>
+          <button className="nav-link-btn" onClick={() => scrollToSection('faq')}>FAQ</button>
         </nav>
 
         {/* Island 3: Price & Action */}
         <div className="glass-island action-island">
-          <div className="price-tag gold">
-            <span>Gold price: ₹6258/gm</span>
-          </div>
-          <div className="price-tag silver">
-            <span>Silver price: ₹80/gm</span>
+          <div className="price-container">
+            <div className="price-tag gold">Gold: ₹6258/gm</div>
+            <div className="price-tag silver">Silver: ₹80/gm</div>
           </div>
           <button
             className="get-started-btn"
@@ -36,8 +40,7 @@ export default function Navbar() {
             Get Started
           </button>
         </div>
-
       </div>
     </header>
-  )
+  );
 }

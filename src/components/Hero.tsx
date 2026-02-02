@@ -22,7 +22,7 @@ export default function Hero() {
   
   <button 
     className="store-btn appstore" 
-    onClick={() => window.open('https://apps.apple.com/us/app/peppy-gold-offers-schemes/id6755230672', '_blank')}
+    onClick={() => window.open('https://apps.apple.com/us/app/peppy-gold-offers-schemes/id6755230672 ', '_blank')}
   >
     App Store
   </button>

@@ -2986,3 +2986,36 @@ section, .why-section, .how-section, .cert-section, .partners-section {
   .pg-faq-question { font-size: 16px; padding: 20px; }
   .faq-title { font-size: 32px; }
 }
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ensure the islands don't disappear on click */
+.nav-link {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav-link:active {
+  color: #ffd700;
+}
+.nav-link-btn, .nav-btn-link {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 0;
+  font-family: inherit;
+}
+
+.nav-link-btn:hover {
+  color: #ffd700;
+}
+
+/* Ensure the scroll doesn't stop too high */
+section {
+  scroll-margin-top: 100px;
+}
