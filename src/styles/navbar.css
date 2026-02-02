@@ -1,0 +1,97 @@
+/* Container to center the floating islands */
+.navbar-wrapper {
+  position: fixed;
+  top: 20px;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 95%;
+  max-width: 1400px;
+}
+
+/* Base Glass Island Style */
+.glass-island {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px) saturate(180%);
+  -webkit-backdrop-filter: blur(15px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 100px; /* Capsule shape */
+  padding: 8px 24px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* Logo Island - Square-ish capsule */
+.logo-island {
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.navbar-logo {
+  height: 40px;
+}
+
+/* Navigation Island */
+.nav-island {
+  flex-grow: 1;
+  justify-content: space-evenly;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+.nav-link:hover {
+  opacity: 1;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+/* Action Island (Price + Button) */
+.action-island {
+  gap: 10px;
+  background: rgba(0, 0, 0, 0.2); /* Slightly darker */
+}
+
+.price-tag {
+  background: rgba(255, 255, 255, 0.9);
+  color: #000;
+  padding: 6px 15px;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.price-tag.gold {
+  background: #ffeb3b; /* Bright Yellow/Gold */
+}
+
+/* The Final Get Started Button */
+.get-started-btn {
+  background: linear-gradient(90deg, #fbc02d, #f57f17);
+  color: #000;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-left: 5px;
+  transition: transform 0.2s ease;
+}
+
+.get-started-btn:hover {
+  transform: scale(1.05);
+}

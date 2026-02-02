@@ -1,0 +1,110 @@
+/* Remove Vite default centering so the website spans full width */
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left; /* Changed from center */
+}
+
+/* Base Dark Theme for the whole App */
+.app-dark-bg {
+  background-color: #0d0d12;
+  background-image: radial-gradient(circle at top right, #1a1a2e, #0d0d12);
+  min-height: 100vh;
+  color: #ffffff;
+}
+
+/* --- NEW GLASS NAVBAR STYLES --- */
+.pg-navbar-fixed {
+  position: fixed;
+  top: 20px;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.pg-nav-content {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  width: 95%;
+  max-width: 1300px;
+  pointer-events: auto;
+}
+
+.pg-glass-box {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px) saturate(150%);
+  -webkit-backdrop-filter: blur(12px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 100px;
+  padding: 10px 24px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+.pg-logo-box { 
+  padding: 8px 12px; 
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.08); 
+}
+
+.pg-logo-img { 
+  height: 38px; 
+  filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.2)); 
+}
+
+.pg-links-box { 
+  flex-grow: 1; 
+  justify-content: space-evenly; 
+}
+
+.pg-link {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.pg-link:hover { 
+  color: #ffd700; 
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+}
+
+.pg-action-box { 
+  gap: 10px; 
+  background: rgba(0, 0, 0, 0.4); 
+}
+
+.pg-price {
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 800;
+  color: #000;
+}
+
+.gold-bg { background: linear-gradient(90deg, #ffd700, #ffb900); }
+.silver-bg { background: #e0e0e0; }
+
+.pg-cta-btn {
+  background: #ffffff;
+  color: #000;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-weight: 800;
+  font-size: 13px;
+  cursor: pointer;
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.pg-cta-btn:hover { 
+  transform: scale(1.08);
+  background: #ffd700;
+}
