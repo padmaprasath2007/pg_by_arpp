@@ -1,4 +1,3 @@
-import React from 'react';
 import startupIndia from '../assets/certifications/startup-india.png';
 import dunsCert from '../assets/certifications/duns.png';
 import dunsQR from '../assets/certifications/duns-qr.png';

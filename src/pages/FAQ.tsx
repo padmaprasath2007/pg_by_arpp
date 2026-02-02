@@ -28,7 +28,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
     </div>
   );
 }
-
+//just a comment
 export default function FAQ() {
   const [activeTab, setActiveTab] = useState<'user' | 'partner'>('user');
 
